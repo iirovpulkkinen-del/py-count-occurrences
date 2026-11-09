@@ -1,6 +1,15 @@
 def count_occurrences(phrase: str, letter: str) -> int:
     # write your code here
-     return phrase.lower().count(letter.lower())
+     count = 0  #counts number of occurrence of string2 in string1
+
+     for word in phrase:  #iterates through each word of the string1
+
+         for character in word:  #iterates through each character of each word in string1
+
+            if character.lower() == letter.lower():  # checks if the character in string1 is equal to the character of string2
+
+               count = count + 1  #adds 1 to the count of string2 in string1
+     return count  #returns number of times the string2 occurs in string1
 
 #in order to check the working of the function add the following lines to the code:
 
